@@ -7,7 +7,7 @@ import  {router as userRoute}  from "./routes/userRoute.js";
 import { router as noteRoute } from "./routes/notesRoute.js";
 
 const app=express();
-const port =3000;
+const port =3001;
 db_connection();
 
 app.use(express.json());
