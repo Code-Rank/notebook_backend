@@ -1,5 +1,5 @@
 import  express, { json }  from "express";
-
+import cors from "cors";
 import mongoose from "mongoose";
 import { UserModel } from "./models/Users.js";
 import { db_connection } from "./db/connection.js";
@@ -9,7 +9,7 @@ import { router as noteRoute } from "./routes/notesRoute.js";
 const app=express();
 const port =3001;
 db_connection();
-
+app.use(cors())
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use("/user",userRoute);
